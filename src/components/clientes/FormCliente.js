@@ -41,6 +41,9 @@ const FormCliente = () => {
         //evita que se recarga la pagina
         e.preventDefault();
 
+        console.log('Entro al submir');  
+        console.log(cliente);  
+
         //validar
         if (cliente.nombres.trim() === '' && cliente.apellidos.trim() === '' && cliente.email.trim() === '') {
             setMensaje('Los nombres, apellidos y el email son obligatorios.');

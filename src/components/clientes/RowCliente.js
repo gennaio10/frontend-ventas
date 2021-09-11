@@ -3,6 +3,9 @@ import { ModalContext } from "../../contexts/modalContext";
 import { ClienteContext } from "../../contexts/clienteContext";
 
 const RowCliente = ({ clienteRC }) => {
+
+  console.log(clienteRC);
+
   const { setshowModal, setsmodalTitle } = useContext(ModalContext);
   const { obtenerCliente, eliminarCliente } = useContext(ClienteContext);
 
@@ -38,10 +41,10 @@ const RowCliente = ({ clienteRC }) => {
           </span>
         </button>
       </td>
-      <td>{clienteRC.nombres}</td>
-      <td>{clienteRC.apellidos}</td>
-      <td>{clienteRC.direccion}</td>
-      <td>{clienteRC.telefono}</td>
+      <td>{clienteRC.idPersona.nombres}</td>
+      <td>{clienteRC.idPersona.apellidos}</td>
+      <td>{clienteRC.idPersona.direccion}</td>
+      <td>{clienteRC.idPersona.telefono}</td>
       <td>{clienteRC.email}</td>
     </tr>
   );

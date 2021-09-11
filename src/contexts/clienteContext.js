@@ -38,6 +38,7 @@ export const ClienteContextProvider = (props) => {
 
   const registrarClientes = async (cliente) => {
     try {
+      console.log(cliente);
       const resultado = await axios.post("/clientes", cliente);
       dispatch({
         type: REGISTRAR_CLIENTE,
